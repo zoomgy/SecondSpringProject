@@ -4,10 +4,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DemoApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+@RestController
+@RequestMapping("/hello")
+public class HelloController {
+
+	// UC1: Simple Hello
+	@GetMapping
+	public String sayHello() {
+		return "Hello from BridgeLabz";
 	}
-
 }
