@@ -27,4 +27,10 @@ public class HelloController {
 		return "Hello " + name + " from BridgeLabz";
 	}
 
+	// UC4: POST Request with JSON Body
+	@PostMapping("/post")
+	public String sayHelloPost(@RequestBody UserDTO user) {
+		return "Hello " + user.getFirstName() + " " + user.getLastName() + " from BridgeLabz";
+	}
+
 }
