@@ -14,4 +14,11 @@ public class HelloController {
 	public String sayHello() {
 		return "Hello from BridgeLabz";
 	}
+
+	// UC2: Query Parameter
+	@GetMapping("/query")
+	public String sayHelloQuery(@RequestParam String name) {
+		return "Hello " + name + " from BridgeLabz";
+	}
+
 }
